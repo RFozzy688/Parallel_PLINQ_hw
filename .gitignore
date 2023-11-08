@@ -1,0 +1,9 @@
+.vs
+bin/
+obj/
+Properties/
+packages/
+NLog.xsd
+*.config
+*.csproj
+*.sln
