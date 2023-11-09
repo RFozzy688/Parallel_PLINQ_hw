@@ -22,6 +22,17 @@ namespace task_7
             }
 
             Console.WriteLine();
+
+            var longestSequenceLength = nums
+               .AsParallel()
+               .Aggregate(
+                   new { Max = 0, Current = 0 },
+                   (a, x) => x > 0
+                       ? new { Max = a.Max > a.Current + 1 ? a.Max : a.Current + 1, Current = a.Current + 1 }
+                       : new { Max = a.Max, Current = 0 })
+               .Max;
+
+            Console.WriteLine($"Длина наибольшей положительной последовательности: {longestSequenceLength}");
         }
         void ReadFile(List<int> arr)
         {
