@@ -37,7 +37,7 @@ namespace task_6
         }
         void ReadFile(List<int> arr)
         {
-            using (FileStream fs = new FileStream(@"..\..\nums.txt", FileMode.Open))
+            using (FileStream fs = new FileStream(@"..\..\..\nums.txt", FileMode.Open))
             {
                 using(StreamReader sr = new StreamReader(fs))
                 {
